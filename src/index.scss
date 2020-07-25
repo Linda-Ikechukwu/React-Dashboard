@@ -1,0 +1,38 @@
+/*Color Variables*/
+$primary-color: #00567A;
+$secondary-color: #99CFE5;
+$dark-text:#4F4F4F;
+
+/*Value Variables*/
+$siderWidth: 24rem;
+
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; /*10px*/
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-content{
+  flex-grow: 1;
+  background-color: white;
+  padding:2rem ;
+  margin-left: $siderWidth;
+}

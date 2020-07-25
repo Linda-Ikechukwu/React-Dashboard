@@ -1,12 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import ScrollToTop from './/utils/scrollToTop'
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
+import "typeface-josefin-sans";
+
+import './index.scss';
+
 import * as serviceWorker from './serviceWorker';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: 'Josefin Sans, sans-serif',
+  },
+
+});
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="/admin/">
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <ScrollToTop>
+          <App />
+        </ScrollToTop>
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
