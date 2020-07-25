@@ -1,0 +1,35 @@
+@import '../../index.scss';
+
+.sidebar-item{
+    height: 5.6rem;
+    
+    &-icon > svg{
+      height: 1.4rem;
+      width: 1.4rem;
+      color:$secondary-color
+    }
+
+    &-text > span{
+        font-size: 1.6rem !important;
+        color:$secondary-color
+    }
+
+    
+
+}
+
+.sidebar-item:hover, .selected{
+    background-color: #081C24 !important;
+    border-left: 3px solid #E5F7FF;
+
+    .sidebar-item-icon > svg{
+       & path{
+           fill:#FFFFFF;
+       }
+
+    } 
+
+    .sidebar-item-text > span{
+        color:#F7F8FC;
+    } 
+}
