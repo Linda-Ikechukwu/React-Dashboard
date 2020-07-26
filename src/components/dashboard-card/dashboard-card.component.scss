@@ -1,0 +1,33 @@
+@import "../../index.scss";
+
+.card {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    align-items: center;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-number {
+        color: $primary-color;
+        font-weight: bold;
+    }
+
+    &-icon {
+        height: 4.8rem;
+        width: 4.8rem;
+        margin-right: 2rem !important;
+        background-color:rgba(153, 207, 229, 0.3) !important;
+    }
+
+    &-subtitle{
+        font-size: 1.2rem;
+    }
+}

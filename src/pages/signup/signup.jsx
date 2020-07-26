@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { ReactComponent as EllipseTop } from '../../assets/svgs/ellipse-top.svg';
-import { ReactComponent as EllipseDown } from '../../assets/svgs/ellipse-down.svg';
+import { ReactComponent as EllipseTop } from '../../assets/svgs/login/ellipse-top.svg';
+import { ReactComponent as EllipseDown } from '../../assets/svgs/login/ellipse-down.svg';
 
 import { makeStyles } from '@material-ui/core/styles';
 
