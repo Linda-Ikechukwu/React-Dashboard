@@ -8,14 +8,14 @@ import {withRouter } from 'react-router-dom';
 
 import SidebarItem from '../sidebar-item/sidebar-item.component';
 
-import { ReactComponent as BikeIcon } from '../../assets/svgs/bikes.svg';
-import { ReactComponent as BookingsIcon } from '../../assets/svgs/bookings.svg';
-import { ReactComponent as DashboardIcon } from '../../assets/svgs/dashboard.svg';
-import { ReactComponent as RevenueIcon } from '../../assets/svgs/revenue.svg';
-import { ReactComponent as RidersIcon } from '../../assets/svgs/riders.svg';
-import { ReactComponent as SettingsIcon } from '../../assets/svgs/settings.svg';
-import { ReactComponent as TripsIcon } from '../../assets/svgs/trips.svg';
-import { ReactComponent as UsersIcon } from '../../assets/svgs/users.svg';
+import { ReactComponent as BikeIcon } from '../../assets/svgs/sidebar/bikes.svg';
+import { ReactComponent as BookingsIcon } from '../../assets/svgs/sidebar/bookings.svg';
+import { ReactComponent as DashboardIcon } from '../../assets/svgs/sidebar/dashboard.svg';
+import { ReactComponent as RevenueIcon } from '../../assets/svgs/sidebar/revenue.svg';
+import { ReactComponent as RidersIcon } from '../../assets/svgs/sidebar/riders.svg';
+import { ReactComponent as SettingsIcon } from '../../assets/svgs/sidebar/settings.svg';
+import { ReactComponent as TripsIcon } from '../../assets/svgs/sidebar/trips.svg';
+import { ReactComponent as UsersIcon } from '../../assets/svgs/sidebar/users.svg';
 
 import Header from '../header/header.component'
 const drawerWidth = '24rem';
@@ -69,7 +69,7 @@ const Sidebar = () => {
                     <Divider />
                 </div>
                
-                <List  className={classes.list} aria-label="sidebar navigation">
+                <List className={classes.list} aria-label="sidebar navigation">
                     <SidebarItem to="/dashboard" primary="Dashboard" icon={<DashboardIcon />} />
                     <SidebarItem to="/users" primary="Users" icon={<UsersIcon />} />
                     <SidebarItem to="/riders" primary="Riders" icon={<RidersIcon />} />

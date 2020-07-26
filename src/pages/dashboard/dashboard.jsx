@@ -1,10 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
 import '../../index.scss'
 
-const drawerWidth = 240;
+import '../../components/dashboard-cards/dashboard-cards.component'
+import DashboardCards from '../../components/dashboard-cards/dashboard-cards.component';
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
@@ -18,8 +20,9 @@ const DashboardPage = () => {
 
     return(
         <main className="main-content">
-        <div className={classes.toolbar} />
-          <h1>DashboardPage</h1>
+            <div className={classes.toolbar} />
+            <DashboardCards/>
+             
         </main>
     )
 }

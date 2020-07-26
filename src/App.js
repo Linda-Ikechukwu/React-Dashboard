@@ -20,6 +20,9 @@ const App = () => {
       <Sidebar/>
       <Route exact path='/dashboard' component={DashboardPage} />
       <Route exact path='/users' component={UsersPage} />
+      <Route exact path='/riders' component={RidersPage} />
+      <Route exact path='/trips' component={TripsPage} />
+      <Route exact path='/revenue' component={RevenuePage} />
       
     </div>
   )

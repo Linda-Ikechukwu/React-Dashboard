@@ -2,6 +2,7 @@
 $primary-color: #00567A;
 $secondary-color: #99CFE5;
 $dark-text:#4F4F4F;
+$background-color: #E5E5E5;
 
 /*Value Variables*/
 $siderWidth: 24rem;
@@ -30,9 +31,11 @@ code {
     monospace;
 }
 
+//Main parent element for dashboard background pages
 .main-content{
   flex-grow: 1;
-  background-color: white;
+  background-color: $background-color;
   padding:2rem ;
   margin-left: $siderWidth;
+  min-height:100vh ;
 }
