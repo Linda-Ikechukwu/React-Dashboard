@@ -46,14 +46,21 @@ const useStyles = makeStyles({
     formbox: {
         width: '320px',
         '& h2': {
-            color: '#00567A'
+            color: '#00567A',
+            fontSize: '2.4rem' ,
+            marginBottom:'1rem',
+        },
+        '& p': {
+            fontSize: '1.6rem',
+            marginTop:'1rem',
         }
 
     },
     textfield: {
         marginBottom: '41px',
         '& label': {
-            marginTop: '-7px'
+            marginTop: '-7px',
+            fontSize:'1.5rem',
         },
         '& div': {
             height: '41px',

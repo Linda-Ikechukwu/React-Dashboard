@@ -9,43 +9,44 @@ import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Link from '@material-ui/core/Link';
-import { fontSize } from '@material-ui/system';
 
 
 const useStyles = makeStyles({
     root: {
-        width: '100%',
+        minWidth: '100%',
     },
     container: {
         fontSize: '1.2rem',
     },
-    thRow:{
-        '& th':{
+    thRow: {
+        '& th': {
             backgroundColor: 'white',
             fontSize: '1.2rem',
-            color:'#C4C4C4',
+            color: '#C4C4C4',
+            whiteSpace: 'nowrap'
         }
     },
-    row:{
-        '& td':{
+    row: {
+        '& td': {
             fontSize: '1.3rem',
-            color:'#4F4F4F',
+            color: '#4F4F4F',
+            whiteSpace: 'nowrap'
         }
     },
-    paginate:{
+    paginate: {
         fontSize: '1.3rem',
-        color:'#C4C4C4',
+        color: '#C4C4C4',
 
-        '& p':{
+        '& p': {
             fontSize: '1.3rem',
-            color:'#C4C4C4',
+            color: '#C4C4C4',
         }
     }
 });
 
 const DataTable = (props) => {
 
-    const { columns, rows } = props;
+    const { columns, rows, handleOpen, paginate, isHidden } = props;
 
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
@@ -64,7 +65,7 @@ const DataTable = (props) => {
         <Paper className={classes.root}>
             <TableContainer className={classes.container}>
                 <Table stickyHeader aria-label="sticky table">
-                    <TableHead>
+                    <TableHead className={`${isHidden ? 'is-hidden' : ' '}`}>
                         <TableRow className={classes.thRow}>
                             {columns.map((column) => (
                                 <TableCell
@@ -80,7 +81,8 @@ const DataTable = (props) => {
                     <TableBody>
                         {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                             return (
-                                <TableRow className={classes.row} hover role="checkbox" tabIndex={-1} key={row.code}>
+                                <TableRow
+                                    className={classes.row} hover role="checkbox" tabIndex={-1} key={row.code} onClick={handleOpen ? handleOpen : null}>
                                     {columns.map((column) => {
                                         const value = row[column.id];
                                         return (
@@ -95,15 +97,19 @@ const DataTable = (props) => {
                     </TableBody>
                 </Table>
             </TableContainer>
-            <TablePagination className={classes.paginate}
-                rowsPerPageOptions={[10, 20, 50, 100]}
-                component="div"
-                count={rows.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onChangePage={handleChangePage}
-                onChangeRowsPerPage={handleChangeRowsPerPage}
-            />
+            {
+                paginate ?
+                    <TablePagination className={classes.paginate}
+                        rowsPerPageOptions={[10, 20, 50, 100]}
+                        component="div"
+                        count={rows.length}
+                        rowsPerPage={rowsPerPage}
+                        page={page}
+                        onChangePage={handleChangePage}
+                        onChangeRowsPerPage={handleChangeRowsPerPage}
+                    /> 
+                    : null
+            }
         </Paper>
     );
 }

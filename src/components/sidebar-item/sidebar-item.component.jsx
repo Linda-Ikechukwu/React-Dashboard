@@ -16,10 +16,6 @@ const SidebarItem = (props) => {
         [to],
     );
 
-    const handleClick = () =>{
-
-    }
-
     return (
         <li>
             <ListItem className="sidebar-item" button component={renderLink}>

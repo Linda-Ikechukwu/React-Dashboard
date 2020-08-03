@@ -5,7 +5,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 
-const ActionButton =()=> {
+const ActionButton =(props)=> {
+    const {options} = props;
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -34,8 +36,11 @@ const ActionButton =()=> {
                 open={open}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>Edit</MenuItem>
-                <MenuItem onClick={handleClose}>Delete</MenuItem>
+                {
+                    options.map((option,index) =>(
+                        <MenuItem onClick={handleClose} key={index} value={option}>{option}</MenuItem>
+                    ))
+                    }
             </Menu>
         </div>
     );

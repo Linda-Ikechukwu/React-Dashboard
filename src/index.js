@@ -28,6 +28,7 @@ ReactDOM.render(
         <CssBaseline />
         <ScrollToTop>
           <App />
+          
         </ScrollToTop>
       </ThemeProvider>
     </BrowserRouter>
