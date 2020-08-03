@@ -14,7 +14,7 @@ import { ReactComponent as DashboardIcon } from '../../assets/svgs/sidebar/dashb
 import { ReactComponent as RevenueIcon } from '../../assets/svgs/sidebar/revenue.svg';
 import { ReactComponent as RidersIcon } from '../../assets/svgs/sidebar/riders.svg';
 import { ReactComponent as SettingsIcon } from '../../assets/svgs/sidebar/settings.svg';
-import { ReactComponent as TripsIcon } from '../../assets/svgs/sidebar/trips.svg';
+import { ReactComponent as RidesIcon } from '../../assets/svgs/sidebar/rides.svg';
 import { ReactComponent as UsersIcon } from '../../assets/svgs/sidebar/users.svg';
 
 import Header from '../header/header.component'
@@ -73,7 +73,7 @@ const Sidebar = () => {
                     <SidebarItem to="/dashboard" primary="Dashboard" icon={<DashboardIcon />} />
                     <SidebarItem to="/users" primary="Users" icon={<UsersIcon />} />
                     <SidebarItem to="/riders" primary="Riders" icon={<RidersIcon />} />
-                    <SidebarItem to="/trip" primary="Trips" icon={<TripsIcon />} />
+                    <SidebarItem to="/rides" primary="Rides" icon={<RidesIcon />} />
                     <SidebarItem to="/bikes" primary="Bikes" icon={<BikeIcon />} />
                     <SidebarItem to="/bookings" primary="Manual Bookings" icon={<BookingsIcon />} />
                     <SidebarItem to="/revenue" primary="Revenue Report" icon={<RevenueIcon />} />

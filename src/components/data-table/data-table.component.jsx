@@ -14,7 +14,7 @@ import { fontSize } from '@material-ui/system';
 
 const useStyles = makeStyles({
     root: {
-        width: '100%',
+        minWidth: '100%',
     },
     container: {
         fontSize: '1.2rem',
@@ -24,12 +24,14 @@ const useStyles = makeStyles({
             backgroundColor: 'white',
             fontSize: '1.2rem',
             color:'#C4C4C4',
+            whiteSpace: 'nowrap'
         }
     },
     row:{
         '& td':{
             fontSize: '1.3rem',
             color:'#4F4F4F',
+            whiteSpace: 'nowrap'
         }
     },
     paginate:{
@@ -45,7 +47,7 @@ const useStyles = makeStyles({
 
 const DataTable = (props) => {
 
-    const { columns, rows } = props;
+    const { columns, rows, handleOpen } = props;
 
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
@@ -80,7 +82,8 @@ const DataTable = (props) => {
                     <TableBody>
                         {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
                             return (
-                                <TableRow className={classes.row} hover role="checkbox" tabIndex={-1} key={row.code}>
+                                <TableRow 
+                                  className={classes.row} hover role="checkbox" tabIndex={-1} key={row.code} onClick={handleOpen ? handleOpen : null}>
                                     {columns.map((column) => {
                                         const value = row[column.id];
                                         return (

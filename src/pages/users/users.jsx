@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 
 import '../../index.scss'
 
-import SortBy from '../../components/sortby/sortby.component'
+import SortBy from '../../components/sortby/sortby.component';
+import UsersTable from '../../components/tables/all-users-table';
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
@@ -14,16 +14,13 @@ const useStyles = makeStyles((theme) => ({
 
 const UsersPage = () => {
 
-    const options =['None Selected']
-
     const classes = useStyles();
 
     return(
         <main className="main-content">
 
-        <div className={classes.toolbar} />
-
-        <SortBy options={options}/>
+           <div className={classes.toolbar} />
+            <UsersTable/>
           
         </main>
     )

@@ -5,8 +5,8 @@ import '../../index.scss'
 
 import SortBy from '../../components/sortby/sortby.component';
 import TableTab from '../../components/table-tab/table-tab.component';
-import RiderApprovedTable from '../../components/tables/rider-approved-table';
-import RiderPendingTable from '../../components/tables/rider-pending-table';
+import BikerApprovedTable from '../../components/tables/bikes-approved-table';
+import BikerPendingTable from '../../components/tables/bikes-pending-table';
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
@@ -14,10 +14,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const tab1 = <RiderApprovedTable/>;
-const tab2 = <RiderPendingTable/>;
+const tab1 = <BikerApprovedTable/>;
+const tab2 = <BikerPendingTable/>;
 
-const RiderPage = () => {
+const BikerPage = () => {
     const tabTitles = ['Approved', 'Pending'];
     
     const tabContent = [tab1,tab2]
@@ -39,4 +39,4 @@ const RiderPage = () => {
     )
 }
 
-export default RiderPage;
+export default BikerPage;

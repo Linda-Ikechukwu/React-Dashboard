@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
 import '../../index.scss'
 
 import DataTable from '../data-table/data-table.component';
 import ViewButton from '../view-button/view-button.component';
 import ActionButton from '../action-button/action-button.component';
+import InfoModal from '../info-modal/info-modal';
+
+const actionOptions = ['Edit','Delete'];
 
 const columnsData = [
     { id: 'riderID', label: 'Rider ID'},
@@ -12,14 +15,15 @@ const columnsData = [
     { id: 'email', label: 'Email Address'},
     { id: 'phone', label: 'Phone Number'},
     { id: 'dateJoined', label: 'Date Joined'},
+    { id: 'status', label: 'Status'},
     { id: 'documents', label: 'Documents'},
     { id: 'actions', label: 'Actions'},
 ];
 
-const createData = (riderID, riderName, email, phone, dateJoined) => {
-    const documents = <ActionButton/>;
-    const actions = <ViewButton/>;
-    return { riderID, riderName, email, phone,dateJoined, documents, actions};
+const createData = (riderID, riderName, email, phone, dateJoined, status) => {
+    const documents = <ViewButton/>;
+    const actions =<ActionButton options={actionOptions}/> ;
+    return { riderID, riderName, email, phone,dateJoined, status, documents, actions};
 }
 
 const rowsData = [
@@ -28,16 +32,25 @@ const rowsData = [
 ];
 
 
-const RiderPendingTable = () => {
+const RiderApprovedTable = () => {
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
     const columns = columnsData;
     const rows = rowsData;
 
     return(
-        
-        <DataTable columns={columns} rows={rows}/>
+        <Fragment>
+            <DataTable columns={columns} rows={rows} handleOpen={handleOpen}/>
+            <InfoModal/>
+        </Fragment>
         
         
     )
 }
 
-export default RiderPendingTable ;
+export default RiderApprovedTable ;

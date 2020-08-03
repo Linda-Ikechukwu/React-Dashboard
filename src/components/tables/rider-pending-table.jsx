@@ -6,21 +6,22 @@ import DataTable from '../data-table/data-table.component';
 import ViewButton from '../view-button/view-button.component';
 import ActionButton from '../action-button/action-button.component';
 
+const actionOptions = ['Edit','Delete'];
+
 const columnsData = [
     { id: 'riderID', label: 'Rider ID'},
     { id: 'riderName', label: 'Rider Name'},
     { id: 'email', label: 'Email Address'},
     { id: 'phone', label: 'Phone Number'},
     { id: 'dateJoined', label: 'Date Joined'},
-    { id: 'status', label: 'Status'},
     { id: 'documents', label: 'Documents'},
     { id: 'actions', label: 'Actions'},
 ];
 
-const createData = (riderID, riderName, email, phone, dateJoined, status) => {
-    const documents = <ActionButton/>;
-    const actions = <ViewButton/>;
-    return { riderID, riderName, email, phone,dateJoined, status, documents, actions};
+const createData = (riderID, riderName, email, phone, dateJoined) => {
+    const documents = <ViewButton/>;
+    const actions = <ActionButton options={actionOptions}/> ;
+    return { riderID, riderName, email, phone,dateJoined, documents, actions};
 }
 
 const rowsData = [
@@ -29,7 +30,7 @@ const rowsData = [
 ];
 
 
-const RiderApprovedTable = () => {
+const RiderPendingTable = () => {
     const columns = columnsData;
     const rows = rowsData;
 
@@ -41,4 +42,4 @@ const RiderApprovedTable = () => {
     )
 }
 
-export default RiderApprovedTable ;
+export default RiderPendingTable ;

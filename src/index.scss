@@ -39,3 +39,7 @@ code {
   margin-left: $siderWidth;
   min-height:100vh ;
 }
+
+.MuiPickersToolbar-toolbar, .MuiPickersDay-daySelected{
+  background-color: $primary-color !important;
+}
