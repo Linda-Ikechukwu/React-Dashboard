@@ -60,3 +60,8 @@ h4{
 .MuiPickersToolbar-toolbar, .MuiPickersDay-daySelected{
   background-color: $primary-color !important;
 }
+
+.is-hidden{
+  display: none !important;
+  visibility: hidden !important;
+}

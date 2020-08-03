@@ -45,7 +45,7 @@ const RiderApprovedTable = () => {
 
     return(
         <Fragment>
-            <DataTable columns={columns} rows={rows} handleOpen={handleOpen}/>
+            <DataTable columns={columns} rows={rows} handleOpen={handleOpen} paginate/>
             <InfoModal/>
         </Fragment>
         

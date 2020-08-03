@@ -39,7 +39,7 @@ const CancelledRidesTable = () => {
 
     return(
         
-        <DataTable columns={columns} rows={rows}/>
+        <DataTable columns={columns} rows={rows} paginate/>
         
         
     )
