@@ -5,8 +5,9 @@ import '../../index.scss'
 import DataTable from '../data-table/data-table.component';
 import ViewButton from '../view-button/view-button.component';
 import ActionButton from '../action-button/action-button.component';
+import InfoModal from '../info-modal/info-modal.component';
 
-const actionOptions = ['Edit','Delete'];
+const actionOptions = ['Approve','Edit','Delete'];
 
 const columnsData = [
     { id: 'riderID', label: 'Rider ID'},

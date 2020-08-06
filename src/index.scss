@@ -65,3 +65,39 @@ h4{
   display: none !important;
   visibility: hidden !important;
 }
+
+/*Status Button Colors*/
+.pending, .offline{
+  background-color:#39A7D4 ;
+}
+
+.online, .approved, .now{
+  background-color: #44BBA5;
+}
+
+.cancelled{
+  background-color: #E94F37;
+}
+
+.scheduled{
+  background-color: $secondary-color;
+}
+
+.pending,.offline, .online, .approved,.now, .cancelled, .scheduled{
+  border-radius: 2rem;
+  padding: 1px;
+  text-align: center;
+}
+
+/*Hover for button*/
+button.MuiButton-contained:hover{
+  background-color: transparent !important;
+  color: $primary-color !important;
+  border: 1px solid $primary-color !important;
+}
+
+/*Overwriting Table Tab active color*/
+button.MuiTab-textColorPrimary.Mui-selected{
+  color: $primary-color;
+  border-bottom: $primary-color;
+}

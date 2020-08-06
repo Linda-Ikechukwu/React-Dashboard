@@ -73,7 +73,8 @@ const useStyles = makeStyles({
         height: '48px',
         background: '#00567A',
         borderRadius: '4px',
-        fontSize: '20px'
+        fontSize: '20px',
+        color:'#ffffff',
     }
 });
 
@@ -105,7 +106,7 @@ const LoginPage = () => {
                                 placeholder="Password"
                                 variant="outlined"
                             />
-                            <Button className={classes.button} variant="contained" color="primary" disableElevation>
+                            <Button className={classes.button} variant="contained" disableElevation>
                                 Login
                             </Button>
 

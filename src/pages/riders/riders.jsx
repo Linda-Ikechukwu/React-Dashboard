@@ -14,27 +14,27 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const tab1 = <RiderApprovedTable/>;
-const tab2 = <RiderPendingTable/>;
+const tab1 = <RiderApprovedTable />;
+const tab2 = <RiderPendingTable />;
 
 const RiderPage = () => {
     const tabTitles = ['Approved', 'Pending'];
-    
-    const tabContent = [tab1,tab2]
-    
-    const options =['Online','Offline'];
+
+    const tabContent = [tab1, tab2]
+
+    const options = ['Online', 'Offline'];
 
     const classes = useStyles();
 
 
-    return(
+    return (
         <main className="main-content">
 
-        <div className={classes.toolbar} />
+            <div className={classes.toolbar} />
 
-        <SortBy options={options}/>
-        <TableTab tabTitles={tabTitles} tabContent={tabContent}/>
-        
+            <SortBy options={options} />
+            <TableTab tabTitles={tabTitles} tabContent={tabContent} />
+
         </main>
     )
 }

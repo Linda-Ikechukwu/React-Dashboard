@@ -5,6 +5,7 @@ import '../../index.scss'
 import DataTable from '../data-table/data-table.component';
 import ViewButton from '../view-button/view-button.component';
 import ActionButton from '../action-button/action-button.component';
+import StatusButton from '../status-button/status-button.component';
 
 
 const columnsData = [
@@ -23,13 +24,13 @@ const columnsData = [
 ];
 
 const createData = (tripID, riderName, sender, receipient, pickup, dropoff,type,fare,createdOn,pickupTime,dropoffTime,status) => {
-    
+    status = <StatusButton style={status}>{status}</StatusButton>
     return { tripID, riderName, sender, receipient, pickup, dropoff,type,fare,createdOn,pickupTime,dropoffTime,status};
 }
 
 const rowsData = [
-    createData('108737NT', 'Nsikan Etukudoh', 'Tammy Jerome','Emmanuel Osaretin','Atiku Abubakar rd','124 Oron rd. Uyo ','Breakable','N350', '15th Jul, 2020','15th Jul, 2020','15th Jul, 2020','Scheduled'),
-    createData('108737NT', 'Nsikan Etukudoh', 'Tammy Jerome','Emmanuel Osaretin','Atiku Abubakar rd','124 Oron rd. Uyo ','Breakable','N350', '15th Jul, 2020','15th Jul, 2020','15th Jul, 2020','Scheduled'),
+    createData('108737NT', 'Nsikan Etukudoh', 'Tammy Jerome','Emmanuel Osaretin','Atiku Abubakar rd','124 Oron rd. Uyo ','Breakable','N350', '15th Jul, 2020','15th Jul, 2020','15th Jul, 2020','scheduled'),
+    createData('108737NT', 'Nsikan Etukudoh', 'Tammy Jerome','Emmanuel Osaretin','Atiku Abubakar rd','124 Oron rd. Uyo ','Breakable','N350', '15th Jul, 2020','15th Jul, 2020','15th Jul, 2020','scheduled'),
 ];
 
 

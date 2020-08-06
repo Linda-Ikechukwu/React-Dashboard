@@ -81,10 +81,12 @@ const TableTab = (props) => {
                 <Tabs className={classes.tabs}
                     value={value}
                     onChange={handleChange}
-                    indicatorColor="primary"
-                    textColor="primary"
                     variant="fullWidth"
                     aria-label="full width tabs example"
+                    textColor="primary"
+                    TabIndicatorProps={{
+                        style: { background: "#00567A", height: "2px", }
+                    }}
                 >
                     {
                         tabTitles.map((title, index) => (

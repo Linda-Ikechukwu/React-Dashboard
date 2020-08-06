@@ -20,7 +20,7 @@ const DashboardCard = (props) => {
                     <Typography className="card-number" component="h3" variant="h3">
                         {number}
                     </Typography>
-                    <Typography className="card-subtitle" variant="subtitle" color="textSecondary">
+                    <Typography className="card-subtitle" variant="subtitle2" color="textSecondary">
                         {text}
                     </Typography>
                 </CardContent>

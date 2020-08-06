@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 
 const DataTable = (props) => {
 
-    const { columns, rows, handleOpen, paginate, isHidden } = props;
+    const { columns, rows, handleRowClick, paginate, isHidden } = props;
 
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
@@ -79,10 +79,10 @@ const DataTable = (props) => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
+                        {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row,index) => {
                             return (
-                                <TableRow
-                                    className={classes.row} hover role="checkbox" tabIndex={-1} key={row.code} onClick={handleOpen ? handleOpen : null}>
+                                <TableRow onClick={handleRowClick ? handleRowClick : null}
+                                    className={classes.row} hover role="checkbox" tabIndex={-1} key={index}>
                                     {columns.map((column) => {
                                         const value = row[column.id];
                                         return (

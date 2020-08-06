@@ -5,6 +5,7 @@ import '../../index.scss'
 import DataTable from '../data-table/data-table.component';
 import ViewButton from '../view-button/view-button.component';
 import ActionButton from '../action-button/action-button.component';
+import StatusButton from '../status-button/status-button.component';
 
 
 const columnsData = [
@@ -22,13 +23,13 @@ const columnsData = [
 ];
 
 const createData = (tripID,riderID, riderName, rideTime,paymentType, tripFare,discount,riderEarn,ownEarn, status) => {
-    
+    status = <StatusButton style={status}>{status}</StatusButton>
     return { tripID,riderID, riderName, rideTime,paymentType, tripFare,discount,riderEarn,ownEarn, status};
 }
 
 const rowsData = [
-    createData('108737NT', '22390', 'Nsikan Etukudoh', '15th Jul, 2020','card','N350','N10','N100','N100','Pending'),
-    createData('108737NT', '22390', 'Nsikan Etukudoh', '15th Jul, 2020','card','N350','N10','N100','N100','Pending'),
+    createData('108737NT', '22390', 'Nsikan Etukudoh', '15th Jul, 2020','card','N350','N10','N100','N100','pending'),
+    createData('108737NT', '22390', 'Nsikan Etukudoh', '15th Jul, 2020','card','N350','N10','N100','N100','approved'),
 ];
 
 

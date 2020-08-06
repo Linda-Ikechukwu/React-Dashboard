@@ -1,11 +1,13 @@
 import React, {Fragment} from 'react';
+import { useHistory } from "react-router-dom";
 
 import '../../index.scss'
 
 import DataTable from '../data-table/data-table.component';
 import ViewButton from '../view-button/view-button.component';
 import ActionButton from '../action-button/action-button.component';
-import InfoModal from '../info-modal/info-modal';
+import StatusButton from '../status-button/status-button.component'
+
 
 const actionOptions = ['Edit','Delete'];
 
@@ -21,32 +23,38 @@ const columnsData = [
 ];
 
 const createData = (riderID, riderName, email, phone, dateJoined, status) => {
+    status = <StatusButton style={status}>{status}</StatusButton>
     const documents = <ViewButton/>;
     const actions =<ActionButton options={actionOptions}/> ;
     return { riderID, riderName, email, phone,dateJoined, status, documents, actions};
 }
 
 const rowsData = [
-    createData(12333, 'Emmanuel Osaretin', 'emmanuel@gmail.com', 706484833 ,'20 July 2000', 'Online'),
-    createData(12733, 'Abraham Osaretin', 'emmanuel@gmail.com', 706484833 ,'20 July 2000', 'Offline')
+    createData(12333, 'Emmanuel Osaretin', 'emmanuel@gmail.com', 706484833 ,'20 July 2000', 'online'),
+    createData(12733, 'Abraham Osaretin', 'emmanuel@gmail.com', 706484833 ,'20 July 2000', 'offline')
 ];
 
 
-const RiderApprovedTable = () => {
-
-    const [open, setOpen] = React.useState(false);
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
-
+const RiderApprovedTable = (props) => {
+    let history = useHistory();
     const columns = columnsData;
     const rows = rowsData;
 
+    const handleRowClick = (event) => {
+        event.preventDefault();
+        if((event.target.tagName === 'TD')){
+            const id = event.target.parentElement.children[0].innerText;
+            console.log(event.target.tagName)
+            history.push(`/riders/${id}/rides`);
+           
+        }else{
+            return;
+        }
+    }
+
     return(
         <Fragment>
-            <DataTable columns={columns} rows={rows} handleOpen={handleOpen} paginate/>
-            <InfoModal/>
+            <DataTable columns={columns} rows={rows} handleRowClick={handleRowClick} paginate/>
         </Fragment>
         
         
