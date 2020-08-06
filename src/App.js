@@ -11,6 +11,7 @@ import SettingsPage from './pages/settings/settings';
 import RidesPage from './pages/rides/rides';
 import UsersPage from './pages/users/users';
 import BikesPage from './pages/bikes/bikes';
+import RidesByRiderPage from './pages/riders-rides/riders-rides'
 
 
 
@@ -27,9 +28,11 @@ const App = () => {
             <Route exact path='/dashboard' component={DashboardPage} />
             <Route exact path='/users' component={UsersPage} />
             <Route exact path='/riders' component={RidersPage} />
+            <Route exact path='/riders/:riderID/rides' component={RidesByRiderPage} />
             <Route exact path='/rides' component={RidesPage} />
             <Route exact path='/bikes' component={BikesPage} />
             <Route exact path='/revenue' component={RevenuePage} />
+            
           </Switch>
         </Route>
       </Switch>

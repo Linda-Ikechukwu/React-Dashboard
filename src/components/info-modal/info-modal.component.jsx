@@ -48,7 +48,7 @@ const InfoModal = (props) => {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            {children}
+            <p>Hello</p>
           </div>
         </Fade>
       </Modal>
