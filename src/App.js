@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import LoginPage from './pages/login/login';
-import SignupPage from './pages/signup/signup';
+import SignupPage from './pages/signUp/signUp';
 import Sidebar from './components/sidebar/sidebar.component';
 import DashboardPage from './pages/dashboard/dashboard';
 import RevenuePage from './pages/revenue/revenue';
