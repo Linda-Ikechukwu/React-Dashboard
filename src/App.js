@@ -12,7 +12,7 @@ import RidesPage from './pages/rides/rides';
 import UsersPage from './pages/users/users';
 import BikesPage from './pages/bikes/bikes';
 import RidesByRiderPage from './pages/ridersRides/riders-rides';
-import SignupPage from './pages/signUp/signUp';
+/* import SignupPage from './pages/signUp/signUp'; */
 
 
 
@@ -23,7 +23,7 @@ const App = () => {
     <div>
       <Switch>
         <Route exact path='/login' component={LoginPage} />
-        <Route exact path='/signup' component={SignupPage} />
+        {/* <Route exact path='/signup' component={SignupPage} /> */}
         <Route>
           <Sidebar />
           <Switch>
