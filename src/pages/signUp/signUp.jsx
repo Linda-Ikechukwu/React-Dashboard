@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, {Fragment} from 'react';
 import { ReactComponent as EllipseTop } from '../../assets/svgs/login/ellipse-top.svg';
 import { ReactComponent as EllipseDown } from '../../assets/svgs/login/ellipse-down.svg';
 
