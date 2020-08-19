@@ -1,3 +1,5 @@
+/*Collection of all the dashboard cards for easier layouting on the dashboard page */
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';

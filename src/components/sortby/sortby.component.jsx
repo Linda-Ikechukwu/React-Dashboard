@@ -37,6 +37,7 @@ const SortBy = (props) => {
 
 
     const [value, setValue] = React.useState('');
+    
     const handleChange = (event) => {
         setValue(event.target.value);
     };
@@ -63,9 +64,6 @@ const SortBy = (props) => {
                 </Select>
             </FormControl>
 
-            <Button className="sortby-button" variant="contained" disableElevation>
-               Apply
-            </Button>
 
         </div>
     );

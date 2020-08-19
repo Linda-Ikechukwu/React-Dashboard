@@ -1,13 +1,13 @@
 import React, { Fragment, useState } from 'react';
 import { useRouteMatch } from "react-router-dom";
-import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 
 import '../../index.scss'
 
-import DataTable from '../data-table/data-table.component';
-import StatusButton from '../status-button/status-button.component'
+import DataTable from '../table-base/table-base.component';
+import TableHeader from '../table-header/table-header.component';
+import StatusButton from '../status-button/status-button.component';
 
 const columnsData = [
     { id: 'tripID', label: 'Trip ID' },
@@ -30,18 +30,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '2rem',
         marginBottom: '2rem',
     },
-    header: {
-        display: 'flex',
-        padding:'2rem',
-        alignItems:'center',
-        backgroundColor:'#ffffff',
-        borderTopLeftRadius: '4px',
-        borderTopRightRadius: '4px',
-
-        '& > *':{
-            marginRight: '1rem',
-        }
-    },
 }));
 
 
@@ -57,11 +45,10 @@ const RidersRideTable = (props) => {
 
         <Fragment>
             <div>
-                <div className={classes.header}>
+                <TableHeader>
                     <Avatar/>
                    <h4>Hey Rider {riderID}</h4>
-                </div>
-                <Divider />
+                </TableHeader>
                 <DataTable columns={columns}  rows={[]}  paginate />
             </div>
           
