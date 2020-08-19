@@ -8,7 +8,7 @@ import InputBase from '@material-ui/core/InputBase';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-import '../sortby/sortby.component.scss'
+import './sortBy.component.scss'
 
 const BootstrapInput = withStyles((theme) => ({
     root: {
@@ -33,10 +33,11 @@ const BootstrapInput = withStyles((theme) => ({
 }))(InputBase);
 
 const SortBy = (props) => {
-    const { options } = props;
+    const { options, defaultOption } = props;
 
 
-    const [value, setValue] = React.useState('');
+    const [value, setValue] = React.useState(defaultOption);
+    
     const handleChange = (event) => {
         setValue(event.target.value);
     };
@@ -63,9 +64,6 @@ const SortBy = (props) => {
                 </Select>
             </FormControl>
 
-            <Button className="sortby-button" variant="contained" disableElevation>
-               Apply
-            </Button>
 
         </div>
     );

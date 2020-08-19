@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import '../../index.scss'
 
-import SortBy from '../../components/sortby/sortby.component';
-import TableTab from '../../components/table-tab/table-tab.component';
-import RiderApprovedTable from '../../components/tables/rider-approved-table';
-import RiderPendingTable from '../../components/tables/rider-pending-table';
+import SortBy from '../../components/sortBy/sortBy.component';
+import TableTab from '../../components/tableTab/tableTab.component';
+import RiderApprovedTable from '../../components/tables/riderApprovedTable';
+import RiderPendingTable from '../../components/tables/riderPendingTable';
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
@@ -14,27 +14,28 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const tab1 = <RiderApprovedTable/>;
-const tab2 = <RiderPendingTable/>;
+const tab1 = <RiderApprovedTable />;
+const tab2 = <RiderPendingTable />;
 
 const RiderPage = () => {
     const tabTitles = ['Approved', 'Pending'];
+
+    const tabContent = [tab1, tab2]
+
+    const options = ['All','Online', 'Offline'];
     
-    const tabContent = [tab1,tab2]
-    
-    const options =['Online','Offline'];
 
     const classes = useStyles();
 
 
-    return(
+    return (
         <main className="main-content">
 
-        <div className={classes.toolbar} />
+            <div className={classes.toolbar} />
 
-        <SortBy options={options}/>
-        <TableTab tabTitles={tabTitles} tabContent={tabContent}/>
-        
+            <SortBy options={options} defaultOption='All' />
+            <TableTab tabTitles={tabTitles} tabContent={tabContent} />
+
         </main>
     )
 }

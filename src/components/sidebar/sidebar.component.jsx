@@ -6,7 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import {withRouter } from 'react-router-dom';
 
 
-import SidebarItem from '../sidebar-item/sidebar-item.component';
+import SidebarItem from '../sidebarItem/sidebarItem.component';
 
 import { ReactComponent as BikeIcon } from '../../assets/svgs/sidebar/bikes.svg';
 import { ReactComponent as BookingsIcon } from '../../assets/svgs/sidebar/bookings.svg';
@@ -75,8 +75,8 @@ const Sidebar = () => {
                     <SidebarItem to="/riders" primary="Riders" icon={<RidersIcon />} />
                     <SidebarItem to="/rides" primary="Rides" icon={<RidesIcon />} />
                     <SidebarItem to="/bikes" primary="Bikes" icon={<BikeIcon />} />
-                    <SidebarItem to="/bookings" primary="Manual Bookings" icon={<BookingsIcon />} />
                     <SidebarItem to="/revenue" primary="Revenue Report" icon={<RevenueIcon />} />
+                    <SidebarItem to="/bookings" primary="Manual Bookings" icon={<BookingsIcon />} />
                     <SidebarItem to="/settings" primary="Settings" icon={<SettingsIcon />} />
                 </List>
             </Drawer>

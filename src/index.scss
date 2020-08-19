@@ -1,3 +1,7 @@
+@import-normalize; 
+
+/* bring in normalize.css styles */
+
 /*Color Variables*/
 $primary-color: #00567A;
 $secondary-color: #99CFE5;
@@ -31,6 +35,23 @@ code {
     monospace;
 }
 
+h1, h3,h4,h5,h6{
+  color:$dark-text;
+  text-transform: uppercase;
+  font-weight:400 ;
+  margin:0;
+}
+
+h3{
+  font-size: 2.4rem;
+ 
+}
+
+h4{
+  font-size: 1.6rem;
+  
+}
+
 //Main parent element for dashboard background pages
 .main-content{
   flex-grow: 1;
@@ -42,4 +63,50 @@ code {
 
 .MuiPickersToolbar-toolbar, .MuiPickersDay-daySelected{
   background-color: $primary-color !important;
+}
+
+//Utility Classes
+.is-hidden{
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.u-bold{
+  font-weight: bold;
+}
+
+/*Status Button Colors*/
+.pending, .offline{
+  background-color:#39A7D4 ;
+}
+
+.online, .approved, .now{
+  background-color: #44BBA5;
+}
+
+.cancelled{
+  background-color: #E94F37;
+}
+
+.scheduled{
+  background-color: $secondary-color;
+}
+
+.pending,.offline, .online, .approved,.now, .cancelled, .scheduled{
+  border-radius: 2rem;
+  padding: 1px;
+  text-align: center;
+}
+
+/*Hover for button*/
+button.MuiButton-contained:hover{
+  background-color: transparent !important;
+  color: $primary-color !important;
+  border: 1px solid $primary-color !important;
+}
+
+/*Overwriting Table Tab active color*/
+button.MuiTab-textColorPrimary.Mui-selected{
+  color: $primary-color;
+  border-bottom: $primary-color;
 }
