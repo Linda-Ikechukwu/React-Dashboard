@@ -7,11 +7,11 @@ import Container from '@material-ui/core/Container';
 
 import '../../index.scss'
 
-import '../../components/dashboard-cards/dashboard-cards.component'
-import DashboardCards from '../../components/dashboard-cards/dashboard-cards.component';
-import DashboardRevenue from '../../components/dashboard-revenue/dashboard-revenue.component';
-import AllRidesTable from '../../components/tables/all-rides-table';
-import TopRidersTable from '../../components/tables/top-riders-table';
+import '../../components/dashboardCards/dashboardCards.component'
+import DashboardCards from '../../components/dashboardCards/dashboardCards.component';
+import DashboardRevenue from '../../components/dashboardRevenue/dashboardRevenue.component';
+import AllRidesTable from '../../components/tables/allRidesTable';
+import TopRidersTable from '../../components/tables/topRidersTable';
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar

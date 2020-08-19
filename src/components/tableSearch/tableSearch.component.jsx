@@ -5,39 +5,49 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     root: {
-        marginRight:'auto',
+        marginRight: 'auto',
 
-        '& .MuiOutlinedInput-input':{
-            padding:'1.4rem ',
+        '& .MuiInputBase-input': {
+            fontSize: '1.4rem',
         },
-        '& .MuiFormLabel-root':{
-            fontSize:'1.5rem',
-            marginTop:'-6px',
+
+        '& .MuiOutlinedInput-input': {
+            padding: '1.4rem ',
         },
-        '& .MuiInputLabel-outlined.MuiInputLabel-shrink':{
+        '& .MuiFormLabel-root': {
+            fontSize: '1.5rem',
+            marginTop: '-6px',
+        },
+        '& .MuiInputLabel-outlined.MuiInputLabel-shrink': {
             transform: 'translate(10px, -4px) scale(1)',
-            fontSize:'1rem',
+            fontSize: '1rem',
         },
-        '& .Mui-focused':{
-           color: '#00567A',
+        '& .Mui-focused': {
+            color: '#00567A',
         }
-    }
-      
+    },
+    parent: {
+        position:'relative',
+        marginLeft:'auto',
+    },
+
 });
 
 const TableSearch = (props) => {
     const classes = useStyles();
 
-    const {query, handleQueryChange} =props;
+    const { query, handleQueryChange } = props;
 
-    return(
-        <TextField className={classes.root}
-          type='text' 
-          id="outlined-basic" 
-          label="Search" variant="outlined" 
-          value={query} 
-          onChange={handleQueryChange}
-        />
+    return (
+        <div className={classes.parent}>
+            <TextField className={classes.root}
+                type='text'
+                id="outlined-basic"
+                label="Search" variant="outlined"
+                value={query}
+                onChange={handleQueryChange}
+            />
+        </div>
     )
 }
 
@@ -46,7 +56,7 @@ export default TableSearch;
 TableSearch.propTypes = {
 
     /*Query contains the search string to filter each table agaisnt */
-    query : PropTypes.string,
+    query: PropTypes.string,
 
     /*handleQueryChange filters the table on query change */
     handleQueryChange: PropTypes.func,

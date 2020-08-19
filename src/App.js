@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-import LoginPage from './pages/login/login';
-import SignupPage from './pages/signup/signup';
+import LoginPage from './pages/signIn/signIn';
+import SignupPage from './pages/signUp/signUp';
 import Sidebar from './components/sidebar/sidebar.component';
 import DashboardPage from './pages/dashboard/dashboard';
 import RevenuePage from './pages/revenue/revenue';
@@ -11,11 +11,12 @@ import SettingsPage from './pages/settings/settings';
 import RidesPage from './pages/rides/rides';
 import UsersPage from './pages/users/users';
 import BikesPage from './pages/bikes/bikes';
-import RidesByRiderPage from './pages/riders-rides/riders-rides'
+import RidesByRiderPage from './pages/ridersRides/riders-rides'
 
 
 
 const App = () => {
+  const loggedIn = true;
 
   return (
     <div>
@@ -25,6 +26,8 @@ const App = () => {
         <Route>
           <Sidebar />
           <Switch>
+            <Redirect exact from="/" to="/dashboard" />
+
             <Route exact path='/dashboard' component={DashboardPage} />
             <Route exact path='/users' component={UsersPage} />
             <Route exact path='/riders' component={RidersPage} />

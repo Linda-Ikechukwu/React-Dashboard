@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import '../../index.scss'
 
-import SortBy from '../../components/sortby/sortby.component';
-import TableTab from '../../components/table-tab/table-tab.component';
-import BikerApprovedTable from '../../components/tables/bikes-approved-table';
-import BikerPendingTable from '../../components/tables/bikes-pending-table';
+import SortBy from '../../components/sortBy/sortBy.component';
+import TableTab from '../../components/tableTab/tableTab.component';
+import BikerApprovedTable from '../../components/tables/bikesApprovedTable';
+import BikerPendingTable from '../../components/tables/bikesPendingTable';
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
@@ -22,7 +22,7 @@ const BikerPage = () => {
     
     const tabContent = [tab1,tab2]
     
-    const options =['Online','Offline'];
+    const options =['All','Online','Offline'];
 
     const classes = useStyles();
 
@@ -32,7 +32,7 @@ const BikerPage = () => {
 
         <div className={classes.toolbar} />
 
-        <SortBy options={options}/>
+        <SortBy options={options} defaultOption='All' />
         <TableTab tabTitles={tabTitles} tabContent={tabContent}/>
         
         </main>
