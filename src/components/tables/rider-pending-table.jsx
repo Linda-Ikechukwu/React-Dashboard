@@ -2,10 +2,9 @@ import React from 'react';
 
 import '../../index.scss'
 
-import DataTable from '../data-table/data-table.component';
+import DataTable from '../table-base/table-base.component';
 import ViewButton from '../view-button/view-button.component';
 import ActionButton from '../action-button/action-button.component';
-import InfoModal from '../info-modal/info-modal.component';
 
 const actionOptions = ['Approve','Edit','Delete'];
 

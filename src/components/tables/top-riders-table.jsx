@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
 
-import DataTable from '../data-table/data-table.component';
+import DataTable from '../table-base/table-base.component';
 
 const useStyles = makeStyles((theme) => ({
     header: {

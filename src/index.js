@@ -16,14 +16,18 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: 'Josefin Sans, sans-serif',
   },
-
+  palette: {
+    primary: {
+      main: '#00567A',
+    },
+  }
 });
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/admin/">
+    <BrowserRouter basename="/admin">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <ScrollToTop>
