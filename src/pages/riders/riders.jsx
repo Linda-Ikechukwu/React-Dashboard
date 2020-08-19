@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import '../../index.scss'
 
-import SortBy from '../../components/sortBy/sortBy.component';
+import SortBy from '../../components/sortby/sort.component';
 import TableTab from '../../components/tableTab/tableTab.component';
 import RiderApprovedTable from '../../components/tables/riderApprovedTable';
 import RiderPendingTable from '../../components/tables/riderPendingTable';

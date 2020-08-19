@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import '../../index.scss';
 
-import SortBy from '../../components/sortBy/sortBy.component';
+import SortBy from '../../components/sortby/sort.component';
 import TableTab from '../../components/tableTab/tableTab.component';
 import RidersRideTable from '../../components/tables/ridersRidesTable';
 import BackButton from '../../components/backButton/backButton.component'

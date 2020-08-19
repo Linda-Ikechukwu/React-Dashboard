@@ -1,15 +1,15 @@
-import React, { Fragment } from 'react';
+import React, {Fragment} from './node_modules/react';
 import { ReactComponent as EllipseTop } from '../../assets/svgs/login/ellipse-top.svg';
 import { ReactComponent as EllipseDown } from '../../assets/svgs/login/ellipse-down.svg';
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from './node_modules/@material-ui/core/styles';
 
 import {
     Grid,
     Box,
     TextField,
     Button
-} from '@material-ui/core';
+} from './node_modules/@material-ui/core';
 
 const useStyles = makeStyles({
     container: {

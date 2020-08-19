@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import '../../index.scss'
 
-import SortBy from '../../components/sortBy/sortBy.component';
+import SortBy from '../../components/sortby/sort.component';
 import SelectDatePicker from '../../components/datePicker/datePicker';
 import RevenueTable from '../../components/tables/revenueTable';
 
