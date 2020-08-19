@@ -3,7 +3,6 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 
 import LoginPage from './pages/signIn/signIn';
-import SignupPage from './pages/signUp/signUp';
 import Sidebar from './components/sidebar/sidebar.component';
 import DashboardPage from './pages/dashboard/dashboard';
 import RevenuePage from './pages/revenue/revenue';
@@ -12,7 +11,8 @@ import SettingsPage from './pages/settings/settings';
 import RidesPage from './pages/rides/rides';
 import UsersPage from './pages/users/users';
 import BikesPage from './pages/bikes/bikes';
-import RidesByRiderPage from './pages/ridersRides/riders-rides'
+import RidesByRiderPage from './pages/ridersRides/riders-rides';
+import SignupPage from './pages/signUp/signUp';
 
 
 
