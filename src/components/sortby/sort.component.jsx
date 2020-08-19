@@ -8,7 +8,7 @@ import InputBase from '@material-ui/core/InputBase';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-import './sortBy.component.scss'
+import './sort.component.scss'
 
 const BootstrapInput = withStyles((theme) => ({
     root: {
