@@ -65,9 +65,14 @@ h4{
   background-color: $primary-color !important;
 }
 
+//Utility Classes
 .is-hidden{
   display: none !important;
   visibility: hidden !important;
+}
+
+.u-bold{
+  font-weight: bold;
 }
 
 /*Status Button Colors*/

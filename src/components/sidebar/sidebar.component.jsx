@@ -6,7 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import {withRouter } from 'react-router-dom';
 
 
-import SidebarItem from '../sidebar-item/sidebar-item.component';
+import SidebarItem from '../sidebarItem/sidebarItem.component';
 
 import { ReactComponent as BikeIcon } from '../../assets/svgs/sidebar/bikes.svg';
 import { ReactComponent as BookingsIcon } from '../../assets/svgs/sidebar/bookings.svg';

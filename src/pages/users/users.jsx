@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import '../../index.scss'
 
-import SortBy from '../../components/sortby/sortby.component';
-import UsersTable from '../../components/tables/all-users-table';
+import SortBy from '../../components/sortBy/sortBy.component';
+import UsersTable from '../../components/tables/allUsersTable';
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
